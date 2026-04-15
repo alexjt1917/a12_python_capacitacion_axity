@@ -1,0 +1,26 @@
+[
+    {
+      "producto": "Laptop",
+      "categoria": "Tecnologia",
+      "precio": 15000,
+      "cantidad": 2
+    },
+    {
+      "producto": "Mouse",
+      "categoria": "Tecnologia",
+      "precio": 300,
+      "cantidad": 5
+    },
+    {
+      "producto": "Silla",
+      "categoria": "Oficina",
+      "precio": 1200,
+      "cantidad": 3
+    },
+    {
+        "producto": "Laptop123",
+        "categoria": "Tecnologia",
+        "precio": 1000,
+        "cantidad": 1
+      }
+  ]
