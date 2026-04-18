@@ -31,7 +31,7 @@ class Order:
         if not (0 <= self.tax_rate <= 1):
             raise ValueError("tax_rate debe estar entre 0 y 1")
 
-    @property
+    @property  # convierte un método en un atributo de "solo lectura". # Para limpieza de código
     def subtotal(self) -> float:
         return round(self.quantity * self.unit_price, 2)
 
