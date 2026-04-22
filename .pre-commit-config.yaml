@@ -1,0 +1,37 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: trailing-whitespace
+        files: ^fundamental/modulo_05_tipado_calidad/
+      - id: end-of-file-fixer
+        files: ^fundamental/modulo_05_tipado_calidad/
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: https://github.com/psf/black
+    rev: 24.10.0
+    hooks:
+      - id: black
+        files: ^fundamental/modulo_05_tipado_calidad/
+
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        files: ^fundamental/modulo_05_tipado_calidad/
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.15.10
+    hooks:
+      - id: ruff
+        files: ^fundamental/modulo_05_tipado_calidad/
+        args: ["--fix"]
+
+  - repo: local
+    hooks:
+      - id: mypy-modulo-05
+        name: mypy modulo 05
+        entry: bash -c 'cd fundamental/modulo_05_tipado_calidad && poetry run mypy src tests'
+        language: system
+        pass_filenames: false
